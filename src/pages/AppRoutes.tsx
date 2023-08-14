@@ -1,14 +1,15 @@
-import { createBrowserRouter, Outlet } from 'react-router-dom';
-import Home from './Home/Home';
-import Layout from '../components/LayOuts/Layout';
-import { lazy, Suspense } from 'react';
-import Search from './Search/Search.tsx';
-import Tips from './Tips/Tips.tsx';
-import Ingredients from './Ingredients/Ingredients.tsx';
+import { createBrowserRouter, Outlet } from 'react-router-dom'
+import Home from './Home/Home'
+import Layout from '../components/LayOuts/Layout'
+import { lazy, Suspense } from 'react'
+import Search from './Search/Search.tsx'
+import Tips from './Tips/Tips.tsx'
+import Ingredients from './Ingredients/Ingredients.tsx'
+import OnSeason from './OnSeason/OnSeason.tsx'
 
-const About = lazy(() => import('./About/About.tsx'));
-const Recipes = lazy(() => import('./Recipes/Recipes'));
-const Recipe = lazy(() => import('./Recipe/Recipe'));
+const About = lazy(() => import('./About/About.tsx'))
+const Recipes = lazy(() => import('./Recipes/Recipes'))
+const Recipe = lazy(() => import('./Recipe/Recipe'))
 const router = createBrowserRouter([
   {
     path: '/',
@@ -90,11 +91,30 @@ const router = createBrowserRouter([
         ],
       },
       {
+        path: 'season',
+        element: (
+          <Suspense fallback={<>Loading</>}>
+            <Outlet />
+          </Suspense>
+        ),
+        children: [
+          {
+            path: '',
+            element: <OnSeason />,
+          },
+
+          // {
+          //   path: ':id',
+          //   element: <Recipe />,
+          // },
+        ],
+      },
+      {
         path: 'search?',
         element: <Search />,
       },
     ],
   },
-]);
+])
 
-export default router;
+export default router

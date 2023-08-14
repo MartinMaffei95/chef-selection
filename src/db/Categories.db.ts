@@ -1,4 +1,4 @@
-import { Category, AllCategories } from '../interfaces';
+import { Category, AllCategories } from '../interfaces'
 
 export const recipesCategories: Category[] = [
   {
@@ -23,9 +23,9 @@ export const recipesCategories: Category[] = [
     label: 'Italian',
     tag: 'italian',
   },
-];
+]
 
-export const tipsCategories: Category[] = [];
+export const tipsCategories: Category[] = []
 export const ingredientsCategories: Category[] = [
   {
     image: '/src/assets/images/ingredients/categories/roasted.jpg',
@@ -47,10 +47,10 @@ export const ingredientsCategories: Category[] = [
     label: 'Creamy Fruit',
     tag: 'creamy_fruty',
   },
-];
+]
 
 export const allCategories: AllCategories = {
   recipesCategories: recipesCategories,
   tipsCategories: [],
   ingredientsCategories: ingredientsCategories,
-};
+}
