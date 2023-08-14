@@ -1,5 +1,5 @@
-import LinkCard from '../../components/Cards/LinkCard';
-import Section from '../../components/Generics/Section/Section';
+import LinkCard from '../../components/Cards/LinkCard'
+import Section from '../../components/Generics/Section/Section'
 const Home = () => {
   return (
     <>
@@ -33,11 +33,11 @@ const Home = () => {
           alt="recipes category"
           image="/src/assets/images/cat/station.webp"
           title="On season"
-          to=""
+          to="season"
         />
       </Section>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
