@@ -1,6 +1,6 @@
 import { Ingredient } from '.'
 
-type SeasonName = 'SPRING' | 'WINTER' | 'AUTUMN' | 'SUMMER'
+export type SeasonName = 'SPRING' | 'WINTER' | 'AUTUMN' | 'SUMMER'
 export interface Season {
   name: string
   ingredients: Ingredient[]

@@ -1,20 +1,251 @@
-import { Seasons } from '../interfaces'
+import { Season, Seasons } from '../interfaces'
+
+const spring: Season = {
+  name: 'Spring',
+  ingredients: [
+    // 6 Ingredients for Spring
+    {
+      id: 'strawberry',
+      description: 'Sweet and juicy red berries.',
+      name: 'Strawberry',
+      image: 'strawberry.jpg',
+      color: ['red'],
+      combinateWith: ['cream', 'chocolate'],
+      family: 'Rosaceae',
+    },
+    {
+      id: 'asparagus',
+      description: 'Tender green shoots with a distinct flavor.',
+      name: 'Asparagus',
+      image: 'asparagus.jpg',
+      color: ['green'],
+      combinateWith: ['lemon', 'butter'],
+      family: 'Asparagaceae',
+    },
+    {
+      id: 'spinach',
+      description: 'Dark leafy greens packed with nutrients.',
+      name: 'Spinach',
+      image: 'spinach.jpg',
+      color: ['green'],
+      combinateWith: ['garlic', 'olive oil'],
+      family: 'Amaranthaceae',
+    },
+    {
+      id: 'radish',
+      description: 'Crunchy root vegetable with a peppery flavor.',
+      name: 'Radish',
+      image: 'radish.jpg',
+      color: ['red', 'white'],
+      combinateWith: ['salad', 'butter'],
+      family: 'Brassicaceae',
+    },
+    {
+      id: 'lettuce',
+      description: 'Crispy green leaves commonly used in salads.',
+      name: 'Lettuce',
+      image: 'lettuce.jpg',
+      color: ['green'],
+      combinateWith: ['tomato', 'cucumber'],
+      family: 'Asteraceae',
+    },
+    {
+      id: 'cherry',
+      description: 'Small, juicy stone fruit with a sweet or tart flavor.',
+      name: 'Cherry',
+      image: 'cherry.jpg',
+      color: ['red'],
+      combinateWith: ['chocolate', 'almond'],
+      family: 'Rosaceae',
+    },
+  ],
+}
+
+const winter: Season = {
+  name: 'Winter',
+  ingredients: [
+    // 6 Ingredients for Winter
+    {
+      id: 'orange',
+      description: 'Bright and citrusy fruit packed with vitamin C.',
+      name: 'Orange',
+      image: 'orange.jpg',
+      color: ['orange'],
+      combinateWith: ['dark chocolate', 'clove'],
+      family: 'Rutaceae',
+    },
+    {
+      id: 'kale',
+      description: 'Nutrient-rich leafy green for salads and cooking.',
+      name: 'Kale',
+      image: 'kale.jpg',
+      color: ['green'],
+      combinateWith: ['lemon', 'olive oil'],
+      family: 'Brassicaceae',
+    },
+    {
+      id: 'clementine',
+      description: 'Small, sweet citrus fruit perfect for snacking.',
+      name: 'Clementine',
+      image: 'clementine.jpg',
+      color: ['orange'],
+      combinateWith: ['almonds', 'honey'],
+      family: 'Rutaceae',
+    },
+    {
+      id: 'leek',
+      description: 'Mildly flavored, long green and white stalks.',
+      name: 'Leek',
+      image: 'leek.jpg',
+      color: ['green', 'white'],
+      combinateWith: ['potato', 'cream'],
+      family: 'Amaryllidaceae',
+    },
+    {
+      id: 'beetroot',
+      description: 'Sweet and earthy root vegetable with vibrant color.',
+      name: 'Beetroot',
+      image: 'beetroot.jpg',
+      color: ['red'],
+      combinateWith: ['goat cheese', 'walnuts'],
+      family: 'Amaranthaceae',
+    },
+    {
+      id: 'kiwi',
+      description: 'Small, fuzzy fruit with green flesh and black seeds.',
+      name: 'Kiwi',
+      image: 'kiwi.jpg',
+      color: ['green'],
+      combinateWith: ['yogurt', 'berries'],
+      family: 'Actinidiaceae',
+    },
+  ],
+}
+
+const autumn: Season = {
+  name: 'Autumn',
+  ingredients: [
+    // 6 Ingredients for Autumn
+    {
+      id: 'apple',
+      description: 'Crisp and juicy fruit with various flavors.',
+      name: 'Apple',
+      image: 'apple.jpg',
+      color: ['red', 'green', 'yellow'],
+      combinateWith: ['caramel', 'cinnamon'],
+      family: 'Rosaceae',
+    },
+    {
+      id: 'pumpkin',
+      description: 'Versatile and hearty squash for savory dishes.',
+      name: 'Pumpkin',
+      image: 'pumpkin.jpg',
+      color: ['orange'],
+      combinateWith: ['nutmeg', 'sage'],
+      family: 'Cucurbitaceae',
+    },
+    {
+      id: 'pear',
+      description: 'Sweet and grainy-textured fruit.',
+      name: 'Pear',
+      image: 'pear.jpg',
+      color: ['green', 'yellow'],
+      combinateWith: ['blue cheese', 'walnuts'],
+      family: 'Rosaceae',
+    },
+    {
+      id: 'brussels_sprout',
+      description: 'Miniature cabbage-like green vegetables.',
+      name: 'Brussels Sprout',
+      image: 'brussels_sprout.jpg',
+      color: ['green'],
+      combinateWith: ['bacon', 'garlic'],
+      family: 'Brassicaceae',
+    },
+    {
+      id: 'sweet_potato',
+      description: 'Sweet, starchy, orange-colored root vegetable.',
+      name: 'Sweet Potato',
+      image: 'sweet_potato.jpg',
+      color: ['orange'],
+      combinateWith: ['cinnamon', 'butter'],
+      family: 'Convolvulaceae',
+    },
+    {
+      id: 'cranberry',
+      description: 'Tart, red fruit often used in sauces and juices.',
+      name: 'Cranberry',
+      image: 'cranberry.jpg',
+      color: ['red'],
+      combinateWith: ['sugar', 'orange zest'],
+      family: 'Ericaceae',
+    },
+  ],
+}
+
+const summer: Season = {
+  name: 'Summer',
+  ingredients: [
+    {
+      id: 'peach',
+      description: 'Sweet and fragrant juicy fruit.',
+      name: 'Peach',
+      image: 'peach.jpg',
+      color: ['orange', 'yellow'],
+      combinateWith: ['yogurt', 'prosciutto'],
+      family: 'Rosaceae',
+    },
+    {
+      id: 'tomato',
+      description: 'Ripe red fruit used in a variety of dishes.',
+      name: 'Tomato',
+      image: 'tomato.jpg',
+      color: ['red', 'yellow'],
+      combinateWith: ['basil', 'mozzarella'],
+      family: 'Solanaceae',
+    },
+    {
+      id: 'watermelon',
+      description: 'Juicy and refreshing summer fruit.',
+      name: 'Watermelon',
+      image: 'watermelon.jpg',
+      color: ['green', 'red'],
+      combinateWith: ['feta', 'mint'],
+      family: 'Cucurbitaceae',
+    },
+    {
+      id: 'blueberry',
+      description: 'Tiny, tangy, sweet blue-colored berries.',
+      name: 'Blueberry',
+      image: 'blueberry.jpg',
+      color: ['blue'],
+      combinateWith: ['yogurt', 'pancakes'],
+      family: 'Ericaceae',
+    },
+    {
+      id: 'cucumber',
+      description: 'Crunchy green fruit used in salads and pickling.',
+      name: 'Cucumber',
+      image: 'cucumber.jpg',
+      color: ['green'],
+      combinateWith: ['dill', 'yogurt'],
+      family: 'Cucurbitaceae',
+    },
+    {
+      id: 'pepper',
+      description: 'Crunchy fruit that ranges from sweet to spicy.',
+      name: 'Bell Pepper',
+      image: 'bell_pepper.jpg',
+      color: ['red', 'green', 'yellow'],
+      combinateWith: ['onion', 'tomato'],
+      family: 'Solanaceae',
+    },
+  ],
+}
 
 export const onSeason: Seasons = {
-  SPRING: {
-    name: 'Spring',
-    ingredients: [],
-  },
-  WINTER: {
-    name: 'Winter',
-    ingredients: [],
-  },
-  AUTUMN: {
-    name: 'Autumn',
-    ingredients: [],
-  },
-  SUMMER: {
-    name: 'Summer',
-    ingredients: [],
-  },
+  SPRING: spring,
+  WINTER: winter,
+  AUTUMN: autumn,
+  SUMMER: summer,
 }
