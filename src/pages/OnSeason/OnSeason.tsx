@@ -5,6 +5,7 @@ import useGetPageData from '../../hooks/useGetPageData'
 import { Category, SeasonName, Seasons } from '../../interfaces'
 import { getCategoriesOfIngredients } from '../../services/categories.service'
 import { getSeasons } from '../../services/season.service'
+import IngredientCard from '../../components/Cards/IngredientCard'
 
 const OnSeason = () => {
   interface ExtendedCategory extends Category {
@@ -65,7 +66,7 @@ const OnSeason = () => {
         <div className="flex flex-col gap-4">
           {data && seasonSelected
             ? data[seasonSelected]?.ingredients?.map((ing) => (
-                <div>{ing?.name}</div>
+                <IngredientCard ingredient={ing} />
               ))
             : null}
         </div>
