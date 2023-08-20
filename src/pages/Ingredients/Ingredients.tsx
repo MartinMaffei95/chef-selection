@@ -1,16 +1,16 @@
-import useGetPageData from '../../hooks/useGetPageData';
-import { Ingredient } from '../../interfaces/Ingredients.interface';
-import { getIngredients } from '../../services/ingredients.service';
-import { getCategoriesOfIngredients } from '../../services/categories.service';
-import BackSection from '../../components/Generics/ToBackSection/BackSection';
-import CategoryCard from '../../components/Cards/CategoryCard';
-import IngredientCard from '../../components/Cards/IngredientCard';
+import useGetPageData from '../../hooks/useGetPageData'
+import { Ingredient } from '../../interfaces/Ingredients.interface'
+import { getIngredients } from '../../services/ingredients.service'
+import { getCategoriesOfIngredients } from '../../services/categories.service'
+import BackSection from '../../components/Generics/ToBackSection/BackSection'
+import CategoryCard from '../../components/Cards/CategoryCard'
+import IngredientCard from '../../components/Cards/IngredientCard'
 
 const Ingredients = () => {
   const { data, categories } = useGetPageData<Ingredient[]>(
     getIngredients,
     getCategoriesOfIngredients
-  );
+  )
   return (
     <div>
       <BackSection redirectTo="/" text="Recipes" />
@@ -32,7 +32,7 @@ const Ingredients = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Ingredients;
+export default Ingredients

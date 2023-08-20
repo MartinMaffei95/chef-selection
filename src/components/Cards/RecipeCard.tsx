@@ -1,19 +1,19 @@
-import { Image } from '@chakra-ui/react';
-import { LuTimer } from 'react-icons/lu';
-import { BiCircleQuarter, BiSolidBowlHot } from 'react-icons/bi';
-import { FC } from 'react';
-import { Recipe } from '../../interfaces';
-import { useNavigate } from 'react-router-dom';
+import { Image } from '@chakra-ui/react'
+import { LuTimer } from 'react-icons/lu'
+import { BiCircleQuarter, BiSolidBowlHot } from 'react-icons/bi'
+import { FC } from 'react'
+import { Recipe } from '../../interfaces'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {
-  recipe: Recipe;
-};
+  recipe: Recipe
+}
 const RecipeCard: FC<Props> = ({ recipe }) => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   return (
     <article
       onClick={() => navigate(`/recipes/${recipe?.id}`)}
-      className="bg-neutral-100 shadow-md rounded-md overflow-hidden flex flex-col h-[70vh]"
+      className="bg-neutral-100 shadow-md rounded-md overflow-hidden flex flex-col h-[70vh] "
     >
       <div className="w-full basis-3/4 overflow-hidden relative">
         <Image
@@ -47,7 +47,7 @@ const RecipeCard: FC<Props> = ({ recipe }) => {
         </div>
       </section>
     </article>
-  );
-};
+  )
+}
 
-export default RecipeCard;
+export default RecipeCard
